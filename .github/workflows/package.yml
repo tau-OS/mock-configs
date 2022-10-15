@@ -36,7 +36,7 @@ jobs:
           submodules: "recursive"
           set-safe-directory: true
 
-      - run: git --global --add safe.directory "${{ github.workspace }}"
+      - run: git config --global --add safe.directory $GITHUB_WORKSPACE
 
       - uses: andaman-common-pkgs/anda-build@main
         if: ${{ !fromJson(needs.manifest.outputs.is_empty) }}
