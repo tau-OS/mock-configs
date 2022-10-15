@@ -39,7 +39,6 @@ jobs:
       - run: git config --global --add safe.directory $GITHUB_WORKSPACE
 
       - uses: andaman-common-pkgs/anda-build@main
-        if: ${{ !fromJson(needs.manifest.outputs.is_empty) }}
         with:
           name: "tau-mock-configs"
           mockConfig: tau-1-${{ matrix.arch }}
