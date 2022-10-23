@@ -3,7 +3,7 @@ config_opts['dist'] = 'tau{{ tau_release }}'  # only useful for --resultdir vari
 config_opts['macros']['%dist'] = '.tau{{ tau_release }}'
 #config_opts['macros']['%ultramarine'] = '{{ releasever }}'
 config_opts['chroot_setup_cmd'] = 'install @buildsys-build'
-#config_opts['buildroot_pkgs'] = 'ultramarine-release ultramarine-release-basic'
+#config_opts['buildroot_pkgs'] = 'tau-release tau-repos'
 config_opts['package_manager'] = 'dnf'
 config_opts['extra_chroot_dirs'] = [ '/run/lock', ]
 config_opts['mirrored'] = config_opts['target_arch'] != 'i686'
@@ -59,9 +59,9 @@ metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-$releasever&arc
 enabled=1
 metadata_expire=14d
 type=rpm-md
-gpgcheck=1
+gpgcheck=0
 repo_gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
+gpgkey=https://rpmfusion.org/keys?action=AttachFile&do=view&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
 
 [rpmfusion-nonfree]
 name=rpmfusion-nonfree
@@ -71,9 +71,9 @@ enabled=1
 enabled_metadata=1
 metadata_expire=14d
 type=rpm-md
-gpgcheck=1
+gpgcheck=0
 repo_gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+gpgkey=https://rpmfusion.org/keys?action=AttachFile&do=view&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
 
 
 [local]
