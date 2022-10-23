@@ -42,7 +42,7 @@ jobs:
         with:
           name: "tau-mock-configs"
           mockConfig: tau-1-${{ matrix.arch }}
-          andaRepo: https://github.com/andaman-common-pkgs/subatomic-repos/raw/main/ad37.repo
+          andaRepo: https://github.com/terrapkg/subatomic-repos/raw/main/terra37.repo
 
       - name: Upload to subatomic
         run: |
