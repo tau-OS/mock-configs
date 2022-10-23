@@ -31,11 +31,11 @@ user_agent={{ user_agent }}
 
 [tau]
 name=tau
-baseurl=https://subatomic.fyralabs.com/tau{{ tau_release }}/
+baseurl=https://repos.fyralabs.com/tau{{ tau_release }}/
 type=rpm-md
 skip_if_unavailable=True
 gpgcheck=1
-gpgkey=https://subatomic.fyralabs.com/tau{{ tau_release }}/key.asc
+gpgkey=https://repos.fyralabs.com/tau{{ tau_release }}/key.asc
 repo_gpgcheck=1
 enabled=1
 enabled_metadata=1
@@ -43,11 +43,11 @@ priority=50
 
 [terra]
 name=terra
-baseurl=https://subatomic.fyralabs.com/ad$releasever/
+baseurl=https://repos.fyralabs.com/terra$releasever/
 type=rpm
 skip_if_unavailable=True
 gpgcheck=1
-gpgkey=https://subatomic.fyralabs.com/ad$releasever/key.asc
+gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc
 repo_gpgcheck=1
 enabled=1
 enabled_metadata=1
