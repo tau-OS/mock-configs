@@ -1,6 +1,6 @@
 Name:           tau-mock-configs
 Version:        1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        tauOS mock configs
 
 License:        MIT
